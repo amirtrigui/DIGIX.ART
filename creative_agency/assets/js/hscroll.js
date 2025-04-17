@@ -1,4 +1,3 @@
-
 $(function () {
   var width = $(window).width();
   if (width > 991) {
@@ -16,7 +15,6 @@ $(function () {
         trigger: ".thecontainer",
         pin: true,
         scrub: 1,
-        // snap: 1 / (sections.length - 1),
         end: () => "+=" + document.querySelector(".thecontainer").offsetWidth
       }
     });
