@@ -168,7 +168,7 @@
             <div class="cont-info valign">
                 <div class="text-center full-width">
                     <div class="logo">
-                        <img src="../assets/imgs/brand/icon logo full light@4x-8.png" alt="">
+                        <img src="../assets/imgs/brand/svg/icon logo full light.svg" alt="">
                     </div>
                     <div class="social-icon mt-40">
                         <a href="https://www.facebook.com/digix.tn" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
@@ -278,20 +278,20 @@
 
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-30">
-                                                    <input  type="text" id="names" name="name" value="" placeholder="Name"
+                                                    <input  type="text" id="name" name="name" value="" placeholder="Name"
                                                         required="required">
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-30">
-                                                    <input  type="email" id="emails" name="email" value="" placeholder="Email"
+                                                    <input  type="email" id="email" name="email" value="" placeholder="Email"
                                                         required="required">
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                <div class="form-group mb-30">
-                                                    <select name="topic" id="selected-topics" 
+                                                    <select name="topic" id="selected-topic" 
 														aria-required="true" aria-invalid="false" required >
 														<option value="Select a Discussion Topic">-Select a Discussion
 															Topic</option>
@@ -311,7 +311,7 @@
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-30">
-                                                    <input  type="text" id="budgets" name="budget" placeholder="what's you budget?"
+                                                    <input  type="text" id="budget" name="budget" placeholder="what's you budget?"
                                                         required="required">
                                                 </div>
                                             </div>
@@ -320,12 +320,12 @@
 
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <textarea id="messages"  name="message" placeholder="Message"
+                                                    <textarea id="message"  name="message" placeholder="Message"
                                                         rows="4" required="required"></textarea>
                                                 </div>
                                                 <div class="mt-30">
                                                     <button type="submit" class="butn butn-md butn-bord butn-rounded">
-                                                        <div class="d-flex align-items-center">
+                                                        <div class="d-flex align-items-center" onclick="sendMail()">
                                                             <span>Let's Talking</span>
                                                             <span class="icon ml-10">
                                                                 <img src="../common/imgs/icons/arrow-top-right.svg"
@@ -358,7 +358,7 @@
                         <div class="row">
                             <div class="col-lg-5">
                                 <a href="#" class="logo md-mb50">
-                                    <img src="../assets/imgs/brand/full logo light@4x-8.png" alt="">
+                                    <img src="../assets/imgs/brand/full logo light@4x-8.png.svg" alt="">
                                 </a>
                             </div>
                             <div class="col-lg-6">
@@ -399,16 +399,16 @@
                     <div class="container bord-thin-top-light pt-50">
                         <div class="row">
                             <div class="col-lg-8">
-                                <div class="copy sub-color md-mb30">
-                                    <p>© 2025 <a href="../index.html">DIGIXI</a>. All Right Reserved</p>
+                                <div class="copy sub-color md-mb50">
+                                    <p>© 2025 <a href="https://www.facebook.com/digix.tn" target="_blank">DIGIXI</a>. All Right Reserved</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 d-flex justify-content-end">
                                 <div class="links sub-color d-flex justify-content-between">
-                                    <a href="#0" class="active">Home</a>
-                                    <a href="#0">Works</a>
-                                    <a href="#0">Studio</a>
-                                    <a href="#0">News</a>
+                                    <a href="../index.html" class="active">Home</a>
+                                    <a href="./about.html">About Us</a>
+                                    <a href="./portfolio.html">Works</a>
+                                    <a href="./contact.html">Contact Us</a>
                                 </div>
                             </div>
                         </div>
@@ -452,6 +452,17 @@
 
     <!-- custom scripts -->
     <script src="assets/js/inner_pages.js"></script>
+    <script src="./assets/js/sender.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init({
+				publicKey: "iQTxqDedcXtyi1rbo",
+			});
+		})();
+	</script>
 
 </body>
 
